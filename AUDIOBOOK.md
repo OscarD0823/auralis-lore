@@ -1,4 +1,4 @@
-# Audiolibros en Asteoria Lore BETA
+# Audiolibros en Auralis Lore BETA
 
 En Manuscrito, selecciona el diálogo, elige quién habla y pulsa **Marcar selección / párrafo**. Con el cursor dentro de un párrafo se marca ese párrafo completo. Narrador quita la marca. **Detectar «Nombre: diálogo»** reconoce los nombres y alias que ya existen en Personajes; no atribuye automáticamente diálogos ambiguos.
 
@@ -10,7 +10,7 @@ Los proyectos anteriores se actualizan a voces neuronales al abrir el estudio po
 
 Cada modelo ocupa aproximadamente **20–109 MiB**. La web descarga el indicado al pulsar Escuchar o Descargar voz; aparece el progreso y el tamaño. Se comprueban tamaño y SHA-256 antes de guardarlo en IndexedDB. Solo se solicitan archivos públicos de modelos: el texto nunca se envía. Después funciona sin conexión si la aplicación y la voz están conservadas. La biblioteca permite eliminar modelos para liberar espacio; borrar datos del navegador puede eliminarlos. Los instaladores de esta versión incluyen Daniela y SHarvard; los demás modelos se descargan al elegirlos. La primera preparación tarda más y depende del dispositivo. Se mantiene una sesión de modelo activa para contener el consumo de memoria.
 
-**Sonidos y música** contiene 254 efectos CC0 de Kenney y diez ambientes originales CC0 de ASTEORIA. Los sonidos de naturaleza originales son procedurales. Importa también WAV, MP3, OGG, M4A, AAC, FLAC o WebM que tu dispositivo pueda decodificar, hasta 50 MB por archivo. Los audios propios se guardan en IndexedDB en este dispositivo, se reutilizan en otros proyectos y nunca se suben a un servidor. El guardado persistente depende del navegador; descargar una copia sigue siendo el respaldo portable.
+**Sonidos y música** contiene 254 efectos CC0 de Kenney y diez ambientes originales CC0 de Auralis. Los sonidos de naturaleza originales son procedurales. Importa también WAV, MP3, OGG, M4A, AAC, FLAC o WebM que tu dispositivo pueda decodificar, hasta 50 MB por archivo. Los audios propios se guardan en IndexedDB en este dispositivo, se reutilizan en otros proyectos y nunca se suben a un servidor. El guardado persistente depende del navegador; descargar una copia sigue siendo el respaldo portable.
 
 En **Línea de tiempo** se editan pausas anteriores/posteriores, entrada ligada a un fragmento, retraso, recorte, duración, volumen, repetición y fundidos. Las duraciones son estimadas hasta generar la escucha y después se muestran las calculadas. Si cambias el texto de una entrada ligada, vuelve a seleccionar su fragmento; Lore avisa antes de mezclarla en un lugar equivocado.
 
@@ -18,9 +18,9 @@ Exporta WAV estéreo de 22.050 Hz por capítulo o un ZIP con los capítulos y el
 
 Las licencias originales de Piper Phonemize/eSpeak NG (MIT/GPL-3.0), ONNX Runtime (MIT), meSpeak/eSpeak (GPL-3.0) y Kenney (CC0-1.0) se conservan en el núcleo común, junto con las fuentes y archivos originales. Autor de la interfaz, marcas de diálogo, modelos, mezcla y ambientes originales: OscarD0823.
 
-Las fichas y las licencias particulares de los datos de cada modelo se conservan en vendor/lore-neural. Se excluyeron modelos con licencia de datos NC o sin determinar. Los WAV incluyen créditos en metadatos RIFF INFO y el ZIP incluye Creditos de voces.txt. No se modifican los pesos originales ni se atribuyen los modelos a ASTEORIA.
+Las fichas y las licencias particulares de los datos de cada modelo se conservan en vendor/lore-neural. Se excluyeron modelos con licencia de datos NC o sin determinar. Los WAV incluyen créditos en metadatos RIFF INFO y el ZIP incluye Creditos de voces.txt. No se modifican los pesos originales ni se atribuyen los modelos a Auralis.
 
-Para reconstruir paquetes con voces españolas integradas: ejecuta node scripts/download-lore-voices.mjs; define ASTEORIA_BUNDLED_VOICES con la ruta absoluta de .prisma/voices antes de compilar Lore o ASTEORIA. Una compilación sin esa variable descarga las voces durante el uso.
+Para reconstruir paquetes con voces españolas integradas: ejecuta node scripts/download-lore-voices.mjs; define ASTEORIA_BUNDLED_VOICES con la ruta absoluta de .prisma/voices antes de compilar Lore o Auralis. Una compilación sin esa variable descarga las voces durante el uso.
 # Uso sin internet
 
 En Audiolibro, pulsa **Preparar audiolibro sin conexión** antes de desconectarte.

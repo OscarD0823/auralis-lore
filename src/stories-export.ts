@@ -3,7 +3,7 @@ import {plainText,type StoryProject} from './stories-model';
 import {prismaPackageMetadata} from '@prisma/core/package-metadata';
 import {download as saveDocument} from '@prisma/core/download';
 const escape=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-// Export a view of the manuscript; the portable .lore backup always keeps everything.
+// Export a view of the manuscript; the portable .auralis-lore backup always keeps everything.
 export function manuscriptSelection(p:StoryProject,ids?:string[]):StoryProject{
  if(ids===undefined)return p;const selected=new Set(ids),chapters=p.chapters.filter(c=>selected.has(c.id));if(!chapters.length)throw Error('Selecciona al menos un capítulo.');
  return {...p,name:chapters.length===1?p.name+' — '+chapters[0].title:p.name+' — Capítulos seleccionados',synopsis:'',chapters};

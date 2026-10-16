@@ -41,7 +41,7 @@ export function treeLayout(project:StoryProject,familyId=''){
  return{nodes,edges,width,height:Math.max(240,(Math.max(0,...level.values())+1)*170+40)};
 }
 export function validateStory(value:unknown):StoryProject{
- const p=value as StoryProject;if(!p||!['auralis-lore','asteoria-lore'].includes(p.format)||p.version!==1)throw Error("Selecciona un proyecto de Auralis Lore (.lore).");
+ const p=value as StoryProject;if(!p||!['auralis-lore','asteoria-lore'].includes(p.format)||p.version!==1)throw Error("Selecciona un proyecto de Auralis Lore (.auralis-lore).");
  const arrays=['chapters','characters','families','relations'] as const;
  for(const key of arrays)if(!Array.isArray(p[key])||(key!=='chapters'&&p[key].length>5000))throw Error('El proyecto contiene una colección no válida.');
  if(typeof p.id!=='string'||!p.id||typeof p.name!=='string'||p.name.length>500||!Number.isFinite(p.updated)||!Number.isFinite(p.goal)||p.goal<0||typeof p.font!=='string'||p.font.length>150)throw Error('Los datos del proyecto no son válidos.');
